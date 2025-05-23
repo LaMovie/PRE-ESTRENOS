@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    body {
+body {
       background: #000;
     }  
-    #Pantalla {
+#Pantalla {
       background: url(https://is.gd/DSiGA7);
       border-radius: 10px;
     }  
-    .video-player {
+.video-player {
       max-width: 640px;
       margin: 0 auto;
     }
-    #List {
+#List {
       list-style: none;
       padding: 0;
       margin: 0;
@@ -24,7 +24,7 @@
       margin-bottom: 10px;
       font-weight:bold;
     }
-    #List li {
+#List li {
       margin-bottom: 10px;
       font-weight: bold; 
       background: linear-gradient(to right, black, lightgreen, black);
@@ -35,33 +35,44 @@
       box-shadow: 0 01em rgba(0,0,0,0.2);             
       transition: 1s;
     }
-    ul li:nth-child(odd):hover{
+ul li:nth-child(odd):hover{
       padding-left: 20%;
       transform: perspective(500px)rotateY(55deg); 
       background: blue;           
     }
-    ul li:nth-child(even):hover{
+ul li:nth-child(even):hover{
       padding-right: 20%;
       transform: perspective(500px)rotateY(-55deg); 
       background: blue;         
     }
-    #opaco{
+#opaco{
       opacity:0.5;
     }
-    #Div {
+#Div {
       color: #000;
     }
-    #Div:hover {
+#Div:hover {
       color: #fff;
     }
-    a {
+a {
       text-decoration: none;
     }
+#fullscreenButton {
+    width: 45%;
+    margin: 5vh 15vh;
+    background: gray;
+    color: black;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 1px;
+    border-radius: 50px;
+}
 </style>
 </head>
 <body> 
   <div class="video-player">
-    <iframe id="Pantalla" src="https://drive.google.com/file/d/15H2BxKev9390cvuFYA998Jq2LKOcEHyS/view?usp=drivesdk" style="width: 100%;height: 200px; aspect-ratio:6/19" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>
+    <embed id="Pantalla" src="https://drive.google.com/file/d/15H2BxKev9390cvuFYA998Jq2LKOcEHyS/view?usp=drivesdk" style="width: 100%;height: 200px; aspect-ratio:6/19" frameborder="0" allowfullscreen="true" allow="encrypted-media"></embed>
     <ul id="List">
     <li><a href="https://drive.google.com/file/d/15H2BxKev9390cvuFYA998Jq2LKOcEHyS/view?usp=drivesdk"><div id="Div">UNTIL DAWN</div></a></li>
     <li><a href="https://play.okpeliz.com/embed/575265"><div id="Div">MISIÓN IMPOSIBLE (La Sentencia Final)</div></a></li>
@@ -69,7 +80,8 @@
       <li><a href="https://drive.google.com/file/d/1yJE2PhvUD_fvHEef8WY356XlbE6D1XUR/view?usp=drivesdk"><div id="Div">UNA PELÍCULA DE MINECRAFT</div></a></li>       
       <li><a href="https://lamovievive.blogspot.com/p/pelis-face.html"><div id="Div">🎥 PELIS FACE 🎥</div></a></li>
     </ul>
-  </div>                                      
+  </div>          
+         <button id="fullscreenButton">Pantalla Completa</button>                          
   <center>
     <img id="opaco" src="https://da.gd/LwEOu2"/>
   </center>
@@ -83,13 +95,31 @@
           var URL = ENLACE.split('view?usp')[0];
       var PRE = 'preview';
     Pantalla.src = URL + PRE; 
+        } else if (ENLACE.includes('okpeliz')) {
+    Pantalla.src = ENLACE; 
         } else {
   window.location.href = ENLACE;          
    } 
   }
 });   
 </script>    
+      <!-- FULL SCREEN -->
 <script>
+var fullscreenButton = document.querySelector('#fullscreenButton');
+var iframe = document.querySelector('embed');
+
+fullscreenButton.addEventListener('click', function() {
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.mozRequestFullScreen) { // Firefox
+    iframe.mozRequestFullScreen();
+  } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) { // IE/Edge
+    iframe.msRequestFullscreen();
+  }
+});
+
 <!-- Detectar cuando entra o sale de fullscreen -->
 document.addEventListener('fullscreenchange', function() {
   if (document.fullscreenElement) {
@@ -104,8 +134,8 @@ document.addEventListener('fullscreenchange', function() {
     }
   }
 });
-</script>    
-        <!-- IFRAME -->
+</script>
+          <!-- EMBED -->
 <script>
   var I = document.getElementById('Pantalla');
   var src = I.getAttribute('src');
