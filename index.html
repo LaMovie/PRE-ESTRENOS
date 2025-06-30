@@ -59,7 +59,7 @@ a {
     }
 #fullscreenButton {
     width: 45%;
-    margin: 5vh 15vh;
+    margin-top: 2vh;    
     background: gray;
     color: black;
     opacity: 0.5;
@@ -71,6 +71,7 @@ a {
 </style>
 </head>
 <body> 
+<center>
   <div class="video-player">
     <embed id="Pantalla" src="https://play.okpeliz.com/embed/575265" style="width: 100%;height: 200px; aspect-ratio:6/19" frameborder="0" allowfullscreen="true" allow="encrypted-media"></embed>
     <ul id="List">
@@ -78,11 +79,12 @@ a {
       <li><a href="https://drive.google.com/file/d/1mq4c_EGOUTQHjpsQDCrAj3FEMJ_cv9lv/view?usp=drivesdk"><div id="Div">BALLERINA</div></a></li>       
       <li><a href="https://lamovievive.blogspot.com/p/pelis-face.html"><div id="Div">🎥 PELIS TUBE 🎥</div></a></li>
     </ul>
-  </div>          
+  </div>   
+       
          <button id="fullscreenButton">Pantalla Completa</button>                          
-  <center>
-    <img id="opaco" src="https://da.gd/LwEOu2"/>
   </center>
+    <img id="opaco" src="https://da.gd/LwEOu2"/>
+  
 <script>
     List.addEventListener('click', (event) => {
       if (event.target.tagName === 'A' || event.target.parentElement.tagName === 'A') {
