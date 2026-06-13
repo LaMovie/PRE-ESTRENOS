@@ -8,10 +8,11 @@ body {
       background: #000;
     }  
 #Pantalla {
-      background: url(https://is.gd/LLj51s);
+      background: url(https://is.gd/DSiGA7);
       background-size: cover;
       background-position: center;
       border-radius: 10px;
+      height: 250px;
     }  
 .video-player {
       max-width: 640px;
@@ -75,14 +76,17 @@ a {
 <body> 
 <center>
   <div class="video-player">
-    <embed id="Pantalla" src="https://www.yout-ube.com/watch?v=0YoqxaZC1Ns" frameborder="0" allowfullscreen="true" allow="encrypted-media"></embed>
+    <iframe id="Pantalla" src="https://www.yout-ube.com/watch?v=0YoqxaZC1Ns" style="width: 100%; aspect-ration:6/19" frameborder="0" allowfullscreen="true" allow="encrypted-media" allow="autoplay" name="WILLOW"></iframe>
     
          <ul id="List">
-  <li><a href="https://data-limit-c.solo-latino.com/8034a91b055c71f1bfb03108f4940102/011773dc7a514e4eb90ef2d75a37df86-microframe-sd.m3u8?hdnts=exp=1781291672_acl=/8034a91b055c71f1bfb03108f4940102/*_hmac=8e302706a82bfc53adf1584875f47c251b3dd2c27ac6e31689825ab06aac24c7"><div id="Div">WHISTLE</div></a></li>
+          
+  <li><a href="https://drive.google.com/file/d/1fx3NbVWusQtbKWCD4sFUkVAivQO892S-/view?usp=drivesdk"><div id="Div">AMOS DEL UNIVERSO</div></a></li>
   
-    <li><a href="https://data-limit-c.solo-latino.com/e02e7d4d57db71f18587e6f6c55a0102/84c3abec86e1426b84a68bbafa2ad8b8-microframe-sd.m3u8?hdnts=exp=1781140508_acl=/e02e7d4d57db71f18587e6f6c55a0102/*_hmac=4560619827628cc4dfcc9ce18df5527da1d5f40cd3e11268793cc6a81b10a779"><div id="Div">MORTAL KOMBAT 2</div></a></li>   
+  <li><a href="https://drive.google.com/file/d/1_fFano7kSswy-HPVbGJ7ksJ7Yny_Yx4W/view?usp=drivesdk"><div id="Div">BACKROOMS</div></a></li>
+  
+    <li><a href="https://drive.google.com/file/d/14fv2-m6z-HEwjeYFpzTKH_Q7Iq5MLxHl/view?usp=drivesdk"><div id="Div">MORTAL KOMBAT 2</div></a></li>   
     
-    <li><a href="https://data-limit-c.solo-latino.com/e0d2c11d608371f18f72e6f7d4580102/53083b9b88fb4c62bcf27ce260d0798d-microframe-sd.m3u8?hdnts=exp=1781264057_acl=/e0d2c11d608371f18f72e6f7d4580102/*_hmac=aae341f463252e4cdc91be975d380900f51435c78dbd73ca2c2e37a29393b7a0"><div id="Div">SCARY MOVIE 6</div></a></li>   
+    <li><a href="https://drive.google.com/file/d/1TaEGu-9VarTFUKc8SSA_ikhNixrXfAZ8/view?usp=drivesdk"><div id="Div">OBSESIÓN</div></a></li>   
    
       <li><a href="https://lamovievive.blogspot.com/p/pelis-face.html"><div id="Div">🎥 PELIS TUBE 🎥</div></a></li>
     </ul>
@@ -91,6 +95,8 @@ a {
          <button id="fullscreenButton">Pantalla Completa</button>                          
   </center>
     <img id="opaco" src="https://da.gd/LwEOu2"/>
+    
+    <audio id="AA" src="https://ia601709.us.archive.org/5/items/bass-city-nany-reggae-music/PANTALLA%20EN%20NEGRO.mp3"></audio>
   
 <script>
     List.addEventListener('click', (event) => {
@@ -103,6 +109,7 @@ a {
           var URL = ENLACE.split('view?usp')[0];
       var PRE = 'preview';
     Pantalla.src = URL + PRE; 
+    AA.play();
       } else if (ENLACE.includes('onfilom')) {
     Pantalla.src = ENLACE; 
         } else if (ENLACE.includes('latino')) {
@@ -120,7 +127,7 @@ a {
       <!-- FULL SCREEN -->
 <script>
 var fullscreenButton = document.querySelector('#fullscreenButton');
-var iframe = document.querySelector('embed');
+var iframe = document.querySelector('iframe');
 
 fullscreenButton.addEventListener('click', function() {
   if (iframe.requestFullscreen) {
