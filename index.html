@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
-<HTML lang="en">
+<HTML lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌐 PRE-ESTRENOS 🌐</title>
 <style>
 body {
       background: #000;
@@ -32,33 +33,24 @@ body {
       font-weight: bold; 
       background: linear-gradient(to right, black, lightgreen, black);
       display: block;
-      padding: 10px;
       border-radius:50px;
-      color:black; 
       box-shadow: 0 01em rgba(0,0,0,0.2);             
-      transition: 1s;
+      transition: 0.35s; /* Ajustado para que coincida con .Active */
     }
-ul li:nth-child(odd):hover{
-      padding-left: 20%;
-      transform: perspective(500px)rotateY(55deg); 
-      background: blue;           
+#List li a {
+      display: block;
+      padding: 10px;
+      color: black;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: color 0.3s;
     }
-ul li:nth-child(even):hover{
-      padding-right: 20%;
-      transform: perspective(500px)rotateY(-55deg); 
-      background: blue;         
-    }
-#opaco{
-      opacity:0.5;
-    }
-#Div {
-      color: #000;
-    }
-#Div:hover {
+/* Aseguramos el color blanco por el retarso */
+#List li a:hover {
       color: #fff;
     }
-a {
-      text-decoration: none;
+#opaco {
+      opacity:0.5;
     }
 #fullscreenButton {
     width: 45%;
@@ -71,22 +63,61 @@ a {
     padding: 1px;
     border-radius: 50px;
 }
+#Leyenda {
+    color: gray;
+    opacity: .8;
+    font-size: 12px;
+    font-weight: bold;
+}
+#List li.Active {
+    color: #fff;
+    scale: 1.1; 
+    background: linear-gradient(
+    270deg,
+    #ff00cc,
+    #8a2be2,
+    #00bf33,
+    #038,
+    purple
+);
+animation: rgbMove 8s linear infinite;
+background-size: 600% 600%;
+box-shadow:
+        0 0 20px rgba(0,255,255,.35),
+        0 10px 30px rgba(0,0,0,.5);
+        width: 80%;
+        margin-left: 5vh;
+}
+#List li.Active a {
+    color: #fff;
+}
+
+@keyframes rgbMove {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 </style>
 </head>
 <body> 
 <center>
   <div class="video-player">
-    <iframe id="Pantalla" src="https://www.yout-ube.com/watch?v=0YoqxaZC1Ns" style="width: 100%; aspect-ration:6/19" frameborder="0" allowfullscreen="true" allow="encrypted-media" allow="autoplay" name="WILLOW"></iframe>
-    
+    <iframe id="Pantalla" src="https://www.yout-ube.com/watch?v=0YoqxaZC1Ns" style="width: 100%; aspect-ratio:16/9" frameborder="0" allowfullscreen="true" allow="encrypted-media" allow="autoplay" name="WILLOW"></iframe>
+  <p id="Leyenda">PRE-ESTRENOS</p>
          <ul id="List">
           
-  <li><a href="https://drive.google.com/file/d/1fx3NbVWusQtbKWCD4sFUkVAivQO892S-/view?usp=drivesdk"><div id="Div">AMOS DEL UNIVERSO</div></a></li>
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/71zznek7zx8dlijokgw54/Supergirl.mp4?rlkey=2oi87s58lcqb3gg3806hesoyw&st=76xr7zqr&dl=0">SUPER GIRL</a></li>
   
-     <li><a href="https://drive.google.com/file/d/14fv2-m6z-HEwjeYFpzTKH_Q7Iq5MLxHl/view?usp=drivesdk"><div id="Div">MORTAL KOMBAT 2</div></a></li>   
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/45u8ocqp8qpcw9wa0p0pc/El-d-a-de-la-revelaci-n.mp4?rlkey=kbb5f6yqdp9nu3mc1u5hashnb&st=w6r77jsv&dl=0">EL DIA DE LA REVELACIÓN</a></li>
+  
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/ig6oh9hpnxi89p0g33jio/Evil-Dead-En-llamas.mp4?rlkey=ke711e6t66xy5xgc6jfqpma0m&st=hc1hx3ub&dl=0">EVIL DEAD EN LLAMAS</a></li>
+  
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/47fgxqf5euubjxlao6uzq/HE-MAN-y-Los-Amos-del-Universo.mp4?rlkey=tn5u8h7eecvjyv3fytkx4pzgp&st=w4buetly&dl=0">AMOS DEL UNIVERSO</a></li>
+  
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/fm5av15zgsdapx5v1sy8e/MORTAL-KOMBAT-2-Copy.mp4?rlkey=669r13wkacf8mguq11vh08s0z&st=i1bzbdf5&dl=0">MORTAL KOMBAT 2</a></li>   
     
-    <li><a href="https://drive.google.com/file/d/1TaEGu-9VarTFUKc8SSA_ikhNixrXfAZ8/view?usp=drivesdk"><div id="Div">OBSESIÓN</div></a></li>   
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/5y6v4vv7sl60oqxlcg6lz/Obsesi-n.mp4?rlkey=fh5r7o498jbpu1jf0ie0t6tr4&st=6fvyl3wj&dl=0">OBSESIÓN</a></li>   
    
-      <li><a href="https://lamovievive.blogspot.com/p/pelis-face.html"><div id="Div">🎥 PELIS TUBE 🎥</div></a></li>
     </ul>
   </div>   
        
@@ -97,32 +128,39 @@ a {
     <audio id="AA" src="https://ia601709.us.archive.org/5/items/bass-city-nany-reggae-music/PANTALLA%20EN%20NEGRO.mp3"></audio>
   
 <script>
-    List.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A' || event.target.parentElement.tagName === 'A') {
-        event.preventDefault(); 
-        var ENLACE = event.target.href || event.target.parentElement.href;
-           
+  List.onclick = (event) => {
+      
+      const targetLink = event.target.closest('a');
+      
+      if (targetLink) {
+     event.preventDefault(); 
+        
+   const ENLACE = targetLink.href;
+        
+        const elemento = targetLink.parentElement; 
   
-  if (ENLACE.includes('file')) {
+   if (ENLACE.includes('file')) {
           var URL = ENLACE.split('view?usp')[0];
       var PRE = 'preview';
     Pantalla.src = URL + PRE; 
-    AA.play();
-      } else if (ENLACE.includes('onfilom')) {
-    Pantalla.src = ENLACE; 
-        } else if (ENLACE.includes('latino')) {
-    Pantalla.src = ENLACE; 
-        } else if (ENLACE.includes('limit')) {
-    Pantalla.src = ENLACE; 
+          AA.play();
         } else if (ENLACE.includes('.mp4')) {
     Pantalla.src = ENLACE;
         } else {
-  window.location.href = ENLACE;          
-   } 
-  }
-});   
+   window.location.href = ENLACE;          
+        } 
+        
+        Leyenda.textContent = targetLink.textContent;
+        
+List.querySelectorAll('li').forEach(li => {
+            li.classList.remove('Active');
+        });
+             elemento.classList.add('Active');
+      }
+    };   
 </script>    
-      <!-- FULL SCREEN -->
+
+<!-- FULL SCREEN -->
 <script>
 var fullscreenButton = document.querySelector('#fullscreenButton');
 var iframe = document.querySelector('iframe');
@@ -130,40 +168,37 @@ var iframe = document.querySelector('iframe');
 fullscreenButton.addEventListener('click', function() {
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
-  } else if (iframe.mozRequestFullScreen) { // Firefox
+  } else if (iframe.mozRequestFullScreen) { 
     iframe.mozRequestFullScreen();
-  } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+  } else if (iframe.webkitRequestFullscreen) { 
     iframe.webkitRequestFullscreen();
-  } else if (iframe.msRequestFullscreen) { // IE/Edge
+  } else if (iframe.msRequestFullscreen) { 
     iframe.msRequestFullscreen();
   }
 });
 
-<!-- Detectar cuando entra o sale de fullscreen -->
 document.addEventListener('fullscreenchange', function() {
   if (document.fullscreenElement) {
-    <!-- Si estamos en pantalla completa, bloquear orientación horizontal -->
     if (screen.orientation && screen.orientation.lock) {
       screen.orientation.lock('landscape');
     }
   } else {
-    <!-- Si salimos de pantalla completa, volver a orientación vertical -->
     if (screen.orientation && screen.orientation.lock) {
       screen.orientation.lock('portrait');
     }
   }
 });
 </script>
-          <!-- EMBED -->
+
+<!-- EMBED -->
 <script>
   var I = document.getElementById('Pantalla');
   var src = I.getAttribute('src');
 
-  if (src.includes('file')) {
+  if (src && src.includes('file')) {
     var previewSrc = src.substring(0, src.indexOf('view?')) + 'preview';
     I.setAttribute('src', previewSrc);
   }
 </script>                       
 </body>
 </html>
-<!-- https://is.gd/DSiGA7 -->
