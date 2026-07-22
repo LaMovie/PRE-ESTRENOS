@@ -108,7 +108,7 @@ box-shadow:
           
   <li><a href="https://dl.dropboxusercontent.com/scl/fi/71zznek7zx8dlijokgw54/Supergirl.mp4?rlkey=2oi87s58lcqb3gg3806hesoyw&st=76xr7zqr&dl=0">SUPER GIRL</a></li>
   
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/45u8ocqp8qpcw9wa0p0pc/El-d-a-de-la-revelaci-n.mp4?rlkey=kbb5f6yqdp9nu3mc1u5hashnb&st=w6r77jsv&dl=0">EL DIA DE LA REVELACIÓN</a></li>
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/45u8ocqp8qpcw9wa0p0pc/El-d-a-de-la-revelaci-n.mp4?rlkey=kbb5f6yqdp9nu3mc1u5hashnb&st=w6r77jsv&dl=0">EL DIA DE LA REVELACION</a></li>
   
   <li><a href="https://dl.dropboxusercontent.com/scl/fi/ig6oh9hpnxi89p0g33jio/Evil-Dead-En-llamas.mp4?rlkey=ke711e6t66xy5xgc6jfqpma0m&st=hc1hx3ub&dl=0">EVIL DEAD EN LLAMAS</a></li>
   
@@ -116,7 +116,7 @@ box-shadow:
   
   <li><a href="https://dl.dropboxusercontent.com/scl/fi/fm5av15zgsdapx5v1sy8e/MORTAL-KOMBAT-2-Copy.mp4?rlkey=669r13wkacf8mguq11vh08s0z&st=i1bzbdf5&dl=0">MORTAL KOMBAT 2</a></li>   
     
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/5y6v4vv7sl60oqxlcg6lz/Obsesi-n.mp4?rlkey=fh5r7o498jbpu1jf0ie0t6tr4&st=6fvyl3wj&dl=0">OBSESIÓN</a></li>   
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/5y6v4vv7sl60oqxlcg6lz/Obsesi-n.mp4?rlkey=fh5r7o498jbpu1jf0ie0t6tr4&st=6fvyl3wj&dl=0">OBSESION</a></li>   
    
     </ul>
   </div>   
@@ -199,6 +199,23 @@ document.addEventListener('fullscreenchange', function() {
     var previewSrc = src.substring(0, src.indexOf('view?')) + 'preview';
     I.setAttribute('src', previewSrc);
   }
+  
+  
+  
+  window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+           var textCapt = params.get('texto');
+  
+        if (textCapt) {
+     var enlaces = document.querySelectorAll('#List li a');     
+    
+    enlaces.forEach(a => {
+        if (a.textContent.trim().toLowerCase() === textCapt.trim().toLowerCase()) {
+        a.click(); 
+      }
+    });
+  }
+});
 </script>                       
 </body>
 </html>
