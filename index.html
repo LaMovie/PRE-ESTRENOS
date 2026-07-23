@@ -121,17 +121,17 @@ box-shadow:
   <p id="Leyenda">PRE-ESTRENOS</p>
          <ul id="List">
           
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/71zznek7zx8dlijokgw54/Supergirl.mp4?rlkey=2oi87s58lcqb3gg3806hesoyw&st=76xr7zqr&dl=0">SUPER GIRL</a></li>
+  <li><a href="https://www.dropbox.com/scl/fi/71zznek7zx8dlijokgw54/Supergirl.mp4?rlkey=2oi87s58lcqb3gg3806hesoyw&st=76xr7zqr&dl=0">SUPER GIRL</a></li>
   
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/45u8ocqp8qpcw9wa0p0pc/El-d-a-de-la-revelaci-n.mp4?rlkey=kbb5f6yqdp9nu3mc1u5hashnb&st=w6r77jsv&dl=0">EL DIA DE LA REVELACION</a></li>
+  <li><a href="https://www.dropbox.com/scl/fi/45u8ocqp8qpcw9wa0p0pc/El-d-a-de-la-revelaci-n.mp4?rlkey=kbb5f6yqdp9nu3mc1u5hashnb&st=w6r77jsv&dl=0">EL DIA DE LA REVELACION</a></li>
   
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/ig6oh9hpnxi89p0g33jio/Evil-Dead-En-llamas.mp4?rlkey=ke711e6t66xy5xgc6jfqpma0m&st=hc1hx3ub&dl=0">EVIL DEAD EN LLAMAS</a></li>
+  <li><a href="https://www.dropbox.com/scl/fi/ig6oh9hpnxi89p0g33jio/Evil-Dead-En-llamas.mp4?rlkey=ke711e6t66xy5xgc6jfqpma0m&st=hc1hx3ub&dl=0">EVIL DEAD EN LLAMAS</a></li>
   
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/47fgxqf5euubjxlao6uzq/HE-MAN-y-Los-Amos-del-Universo.mp4?rlkey=tn5u8h7eecvjyv3fytkx4pzgp&st=w4buetly&dl=0">AMOS DEL UNIVERSO</a></li>
+  <li><a href="https://www.dropbox.com/scl/fi/47fgxqf5euubjxlao6uzq/HE-MAN-y-Los-Amos-del-Universo.mp4?rlkey=tn5u8h7eecvjyv3fytkx4pzgp&st=w4buetly&dl=0">AMOS DEL UNIVERSO</a></li>
   
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/fm5av15zgsdapx5v1sy8e/MORTAL-KOMBAT-2-Copy.mp4?rlkey=669r13wkacf8mguq11vh08s0z&st=i1bzbdf5&dl=0">MORTAL KOMBAT 2</a></li>   
+  <li><a href="https://www.dropbox.com/scl/fi/fm5av15zgsdapx5v1sy8e/MORTAL-KOMBAT-2-Copy.mp4?rlkey=669r13wkacf8mguq11vh08s0z&st=i1bzbdf5&dl=0">MORTAL KOMBAT 2</a></li>   
     
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/5y6v4vv7sl60oqxlcg6lz/Obsesi-n.mp4?rlkey=fh5r7o498jbpu1jf0ie0t6tr4&st=6fvyl3wj&dl=0">OBSESION</a></li> 
+  <li><a href="https://www.dropbox.com/scl/fi/7c13iaz2tm1kpalw7gd40/La-Odisea.mp4?rlkey=rwiog8zxy96n6va443tc9onkg&st=8rtrl9m6&dl=0">LA ODISEA</a></li> 
    
   <a id="A" href="MAS.html">...➕ más ➕ ...</a> 
    
@@ -152,20 +152,11 @@ box-shadow:
       if (targetLink) {
      event.preventDefault(); 
         
-   const ENLACE = targetLink.href;
+   const ENLACE = targetLink.href.replace('www.dropbox.com', 'dl.dropboxusercontent.com');
         
         const elemento = targetLink.parentElement; 
-  
-   if (ENLACE.includes('file')) {
-          var URL = ENLACE.split('view?usp')[0];
-      var PRE = 'preview';
-    Pantalla.src = URL + PRE; 
-          AA.play();
-        } else if (ENLACE.includes('.mp4')) {
-    Pantalla.src = ENLACE;
-        } else {
-   window.location.href = ENLACE;          
-        } 
+        
+      Pantalla.src = ENLACE;
         
         Leyenda.textContent = targetLink.textContent;
         
