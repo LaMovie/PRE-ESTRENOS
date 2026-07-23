@@ -104,6 +104,14 @@ box-shadow:
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
+#A {
+    width: 100%;
+    color: #000;
+    margin: 0 13vh;    
+    font-weight: 900;
+    text-decoration: none;
+    background: linear-gradient(to right, black, orange, red, black);
+}
 </style>
 </head>
 <body> 
@@ -123,7 +131,9 @@ box-shadow:
   
   <li><a href="https://dl.dropboxusercontent.com/scl/fi/fm5av15zgsdapx5v1sy8e/MORTAL-KOMBAT-2-Copy.mp4?rlkey=669r13wkacf8mguq11vh08s0z&st=i1bzbdf5&dl=0">MORTAL KOMBAT 2</a></li>   
     
-  <li><a href="https://dl.dropboxusercontent.com/scl/fi/5y6v4vv7sl60oqxlcg6lz/Obsesi-n.mp4?rlkey=fh5r7o498jbpu1jf0ie0t6tr4&st=6fvyl3wj&dl=0">OBSESION</a></li>   
+  <li><a href="https://dl.dropboxusercontent.com/scl/fi/5y6v4vv7sl60oqxlcg6lz/Obsesi-n.mp4?rlkey=fh5r7o498jbpu1jf0ie0t6tr4&st=6fvyl3wj&dl=0">OBSESION</a></li> 
+   
+  <a id="A" href="MAS.html">...➕ más ➕ ...</a> 
    
     </ul>
   </div>   
@@ -167,7 +177,7 @@ List.querySelectorAll('li').forEach(li => {
     };   
 </script>    
 
-<!-- FULL SCREEN -->
+     <!-- FULL SCREEN -->
 <script>
 var fullscreenButton = document.querySelector('#fullscreenButton');
 var iframe = document.querySelector('iframe');
@@ -197,19 +207,9 @@ document.addEventListener('fullscreenchange', function() {
 });
 </script>
 
-<!-- EMBED -->
+       <!-- texto -->
 <script>
-  var I = document.getElementById('Pantalla');
-  var src = I.getAttribute('src');
-
-  if (src && src.includes('file')) {
-    var previewSrc = src.substring(0, src.indexOf('view?')) + 'preview';
-    I.setAttribute('src', previewSrc);
-  }
-  
-  
-  
-  window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);
            var textCapt = params.get('texto');
   
