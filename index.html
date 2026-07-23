@@ -104,12 +104,12 @@ box-shadow:
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
-#A {
-    width: 100%;
+#B {
+    width: 30%;
     color: #000;
     margin: 0 13vh;    
     font-weight: 900;
-    text-decoration: none;
+    border-radius: 20px;
     background: linear-gradient(to right, black, orange, red, black);
 }
 </style>
@@ -133,7 +133,7 @@ box-shadow:
     
   <li><a href="https://www.dropbox.com/scl/fi/7c13iaz2tm1kpalw7gd40/La-Odisea.mp4?rlkey=rwiog8zxy96n6va443tc9onkg&st=8rtrl9m6&dl=0">LA ODISEA</a></li> 
    
-  <a id="A" href="MAS.html">...➕ más ➕ ...</a> 
+ <button id="B">➕ Más ➕</button> 
    
     </ul>
   </div>   
@@ -166,6 +166,10 @@ List.querySelectorAll('li').forEach(li => {
              elemento.classList.add('Active');
       }
     };   
+    
+        B.onclick = () => {
+ window.location.href = 'MAS.html';   
+   }
 </script>    
 
      <!-- FULL SCREEN -->
