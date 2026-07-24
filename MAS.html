@@ -108,6 +108,23 @@ lis.style.borderBottom = '.1px solid #4f3';
     }
  })
 </script>
+         <!-- texto -->
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+           var textCapt = params.get('texto');
+  
+        if (textCapt) {
+     var enlaces = document.querySelectorAll('#Lista li a');     
+    
+    enlaces.forEach(a => {
+        if (a.textContent.trim().toLowerCase() === textCapt.trim().toLowerCase()) {
+        a.click(); 
+      }
+    });
+  }
+});
+</script>      
 </body>
 </html>
 
