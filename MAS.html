@@ -14,10 +14,10 @@ body {
     display: grid;
     list-style: none;
     font-weight: bold;    
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 #Lista li {
-    margin-left: 5vh;
+    margin-left: 0vh;
     color: gold;
     width: 13vh;
     height: 13vh;
@@ -64,9 +64,8 @@ a {
 <script>
  var CH = [
   {name: "OBSESION", url: "https://www.dropbox.com/scl/fi/5y6v4vv7sl60oqxlcg6lz/Obsesi-n.mp4?rlkey=fh5r7o498jbpu1jf0ie0t6tr4&st=6fvyl3wj&dl=0"}, 
-  {name: "MINIONS", url: "https://www.dropbox.com/scl/fi/c3hvejbe2120x7emqxo6b/Minions-Monstruos.mp4?rlkey=f9qs278hdtx9plih7xs92bpfn&st=h14p7yjv&dl=0"},
-  {name: "DEMON SLAYER", url: "https://www.dropbox.com/scl/fi/vh1j78i85ksyxqqe294yf/Demon-Slayer-Kimetsu-no-Yaiba-Castillo-infinito.mp4?rlkey=stfzsvu6b0awcjronnssm7rv3&st=jip0swdp&dl=0"}, 
-  {name: "TOY STORY 5", url: "https://www.dropbox.com/scl/fi/p23u9ohnv6h61jodt1508/Toy-Story-5.mp4?rlkey=m6q4ln25wj9wn6xsoql9m5jhg&st=sqfllynh&dl=0"}
+  {name: "MINIONS & MONSTRUOS", url: "https://www.dropbox.com/scl/fi/ebasi1pbgaar8j6988xp3/Minions-Monstruos-Copy.mp4?rlkey=p2smir7ajxptvpwemkch7e0kc&st=jsubxuqa&dl=0"}, 
+  {name: "TOY STORY 5", url: "https://www.dropbox.com/scl/fi/3qwctxt54a73f8rj9h0so/Toy-Story-5-Copy.mp4?rlkey=wteopugxf2skd5yd8mnte6ibi&st=dyk5xqmi&dl=0"}
  ];
 
  CH.forEach(canal => {
@@ -96,6 +95,12 @@ lis.style.borderBottom = '.1px solid #4f3';
    if (Enlace.includes('dropbox.com')) {
          var URL = Enlace.replace('www.dropbox.com', 'dl.dropboxusercontent.com');
         F.src = URL;
+        
+      } else if (Titulo.includes('🔗')) {
+   Titulo = '⏳Espere...';  
+   e.target.textContent = Titulo; 
+  window.location.href = Enlace;
+          
       } else {
           F.src = Enlace;
       }
