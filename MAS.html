@@ -66,7 +66,8 @@ a {
  var CH = [
   {name: "OBSESION", url: "https://player.okpeliz.com/embed/1339713"}, 
   {name: "MINIONS & MONSTRUOS", url: "https://player.okpeliz.com/embed/1315772"}, 
-  {name: "TOY STORY 5", url: "https://player.okpeliz.com/embed/1084244"}
+  {name: "TOY STORY 5", url: "https://player.okpeliz.com/embed/1084244"}, 
+  {name: "🔗SPIDER MAN NEW DAY", url: "https://latino.solo-latino.com/es/detail/movie/Ytie5e3eJ95h5gZtMmbWq-Spider-Man-Brand-New-Day"}
  ];
 
  CH.forEach(canal => {
@@ -100,7 +101,9 @@ lis.style.borderBottom = '.1px solid #4f3';
       } else if (Titulo.includes('🔗')) {
    Titulo = '⏳Espere...';  
    e.target.textContent = Titulo; 
-  window.location.href = Enlace;
+  setTimeout(() => {
+     window.location.href = Enlace;
+  }, 2000);
           
       } else {
           F.src = Enlace;
