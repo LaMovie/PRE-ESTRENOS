@@ -122,7 +122,9 @@ window.addEventListener('DOMContentLoaded', () => {
      var enlaces = document.querySelectorAll('#Lista li a');     
     
     enlaces.forEach(a => {
-        if (a.textContent.trim().toLowerCase() === textCapt.trim().toLowerCase()) {
+      var Clean = a.textContent.trim().toLowerCase().replace('🔗', '');  
+      
+        if (Clean === textCapt.trim().toLowerCase()) {
         a.click(); 
       }
     });
