@@ -73,7 +73,7 @@ body {
 #opaco {
       opacity:0.5;
     }
-#fullscreenButton {
+#FULL {
     width: 45%;
     margin-top: 2vh;    
     background: gray;
@@ -129,6 +129,12 @@ box-shadow:
     border-radius: 20px;
     background: linear-gradient(to right, black, orange, red, black);
 }
+
+@media (width-min: 500px) {
+    #FULL {
+        width: 20%;
+    }
+}
 </style>
 </head>
 <body> 
@@ -142,23 +148,16 @@ box-shadow:
   
   <li><a href="https://hgcloud.to/e/8d7kls4mv6zx">EL FINAL DE LA CALLE OAK</a></li>
   
-  <li><a href="https://media-cache-node.asia/embed/969681">SPIDER MAN NEW DAY</a></li>
-  
   <li><a href="https://media-cache-node.asia/embed/1368337">LA ODISEA</a></li> 
   
-  <li><a href="https://media-cache-node.asia/embed/1339713">OBSESION</a></li> 
-
-  <li><a href="https://media-cache-node.asia/embed/1084244">TOY STORY 5</a></li> 
-  
-  <li><a href="https://media-cache-node.asia/embed/1315772">MINIONS Y MONSTRUOS</a></li> 
-   
- <button id="B">➕ Más ➕</button> 
+  <button id="B">➕ Más ➕</button> 
    
     </ul>
   </div>   
        
-         <button id="fullscreenButton">Pantalla Completa</button>                          
+   <button id="FULL">Pantalla Completa</button>                          
   </center>
+  
     <img id="opaco" src="https://da.gd/LwEOu2"/>
     
     <audio id="AA" src="https://ia601709.us.archive.org/5/items/bass-city-nany-reggae-music/PANTALLA%20EN%20NEGRO.mp3"></audio>
@@ -193,10 +192,10 @@ List.querySelectorAll('li').forEach(li => {
 
      <!-- FULL SCREEN -->
 <script>
-var fullscreenButton = document.querySelector('#fullscreenButton');
+var FULL = document.querySelector('#FULL');
 var iframe = document.querySelector('iframe');
 
-fullscreenButton.addEventListener('click', function() {
+  FULL.addEventListener('click', function() {
   if (iframe.requestFullscreen) {
     iframe.requestFullscreen();
   } else if (iframe.mozRequestFullScreen) { 
