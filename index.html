@@ -140,7 +140,7 @@ box-shadow:
 <body> 
 <center>
   <div class="video-player">
-    <iframe id="Pantalla" src="https://www.yout-ube.com/watch?v=0YoqxaZC1Ns" style="width: 100%; aspect-ratio:16/9" frameborder="0" allowfullscreen="true" allow="encrypted-media" allow="autoplay" name="WILLOW"></iframe>
+    <iframe id="Pantalla" src="https://www.youtube.com/watch?v=0YoqxaZC1Ns" style="width: 100%; aspect-ratio:16/9" frameborder="0" allowfullscreen="true" allow="encrypted-media" allow="autoplay" name="WILLOW"></iframe>
   <p id="Leyenda">PRE-ESTRENOS</p>
          <ul id="List">
           
@@ -148,7 +148,11 @@ box-shadow:
   
   <li><a href="https://hgcloud.to/e/8d7kls4mv6zx">EL FINAL DE LA CALLE OAK</a></li>
   
-  <li><a href="https://media-cache-node.asia/embed/1368337">LA ODISEA</a></li> 
+  <li><a href="https://media-cache-node.asia/embed/1368337">LA ODISEA</a></li>
+  
+  <li><a href="https://www.youtube.com/watch?v=QEwlcDXFkiA">EL EXORCISTA</a></li>
+  
+  <li><a href="https://www.youtube.com/watch?v=lAr_uspgHm8">DOOMSDAY</a></li> 
   
   <button id="B">➕ Más ➕</button> 
    
@@ -170,7 +174,7 @@ box-shadow:
       if (targetLink) {
      event.preventDefault(); 
         
-   const ENLACE = targetLink.href.replace('www.dropbox.com', 'dl.dropboxusercontent.com');
+   const ENLACE = targetLink.href.replace('www.dropbox.com', 'dl.dropboxusercontent.com').replace('youtube', 'yout-ube');
         
         const elemento = targetLink.parentElement; 
         
@@ -188,6 +192,13 @@ List.querySelectorAll('li').forEach(li => {
         B.onclick = () => {
    window.location.href = 'MAS.html';   
    }
+   
+     var src = Pantalla.getAttribute('src');
+
+  if (src.includes('youtube')) {
+    var S = src.replace('youtube', 'yout-ube');
+    Pantalla.setAttribute('src', S);
+  }
 </script>    
 
      <!-- FULL SCREEN -->
