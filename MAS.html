@@ -34,7 +34,7 @@ body {
 }
 #Lista li {
     margin-left: 0vh;
-    color: gold;
+    color: orange;
     width: 13vh;
     height: 13vh;
     display: flex;
@@ -51,7 +51,7 @@ a {
     color: inherit; 
  /* Hereda El Color Del Padre */
     cursor: none;
-    text-decoration: none;
+    text-decoration: none;    
 }
 #F {
     width: 100%;
@@ -87,8 +87,12 @@ a {
 </center>
 <script>
  var CH = [
-  {name: "INSIDIOUS: FUERA DEL MAS ALLÁ", url: "https://hgcloud.to/e/t23tnu0vvmx7"}, 
-  {name: "EL FINAL DE LA CALLE OAK", url: "https://hgcloud.to/e/8d7kls4mv6zx"}
+  {name: "WERWULF🔴", url: "https://www.youtube.com/watch?v=CnGQAzXCgKM"}, 
+  {name: "BLADE RUNNER 2099🔴", url: "https://www.youtube.com/watch?v=9vnSsgTMoyo"}, 
+  {name: "LA MANGOSTA🔴", url: "https://www.youtube.com/watch?v=VicYdglGsjc"}, 
+  {name: "SACRIFICIO🔴", url: "https://www.youtube.com/watch?v=22n8bvEpDrc"}, 
+  {name: "LA CAIDA DE LA BALLENA🔴", url: "https://www.youtube.com/watch?v=6fPkAv0kDvo"}, 
+  {name: "DOOMSDAY🔴", url: "https://www.youtube.com/watch?v=lAr_uspgHm8"} 
  ];
 
  CH.forEach(canal => {
@@ -105,7 +109,7 @@ a {
      e.preventDefault();  
        LIST.forEach(other => {
    other.style.border = '';
-  other.style.color = 'gold'; 
+  other.style.color = 'orange'; 
   other.style.background = '#001';
       });
  var Enlace = e.target.href;
@@ -115,8 +119,8 @@ a {
 lis.style.borderTop = '1px solid #4f3';
 lis.style.borderBottom = '.1px solid #4f3';
    
-   if (Enlace.includes('dropbox.com')) {
-         var URL = Enlace.replace('www.dropbox.com', 'dl.dropboxusercontent.com');
+   if (Enlace.includes('youtube')) {
+         var URL = Enlace.replace('youtube', 'yout-ube');
         F.src = URL;
         
       } else if (Titulo.includes('🔗')) {
