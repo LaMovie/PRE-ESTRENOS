@@ -33,7 +33,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 #Lista li {
-    margin-left: 0vh;
+    margin-left: 1vh;
     color: orange;
     width: 13vh;
     height: 13vh;
@@ -66,6 +66,14 @@ a {
 }
 #H {
     color: gray;
+}
+.active {
+    background: #000;
+    border-top: 1px solid #4f3;
+    border-bottom: .1px solid #4f3;    
+}
+.active a {
+    color: #4f3;
 }
 
 @media (min-width: 500px) {
@@ -105,19 +113,13 @@ a {
     var LIST = document.querySelectorAll('#Lista li');
     
  LIST.forEach(lis => {
-   lis.onclick = (e) => {    
-     e.preventDefault();  
-       LIST.forEach(other => {
-   other.style.border = '';
-  other.style.color = 'orange'; 
-  other.style.background = '#001';
-      });
- var Enlace = e.target.href;
- var Titulo = e.target.textContent.replace('🔴', '');
-     lis.style.color = '#4f3';
-  lis.style.background = '#000';
-lis.style.borderTop = '1px solid #4f3';
-lis.style.borderBottom = '.1px solid #4f3';
+    lis.onclick = (e) => {    
+       e.preventDefault();  
+  LIST.forEach(other => other.classList.remove('active'));
+  lis.classList.add('active');
+   
+ var Enlace = lis.querySelector('a').href;
+ var Titulo = lis.querySelector('a').textContent.replace('🔴', '');     
    
    if (Enlace.includes('youtube')) {
          var URL = Enlace.replace('youtube', 'yout-ube');
@@ -125,7 +127,7 @@ lis.style.borderBottom = '.1px solid #4f3';
         
       } else if (Titulo.includes('🔗')) {
    Titulo = '⏳Espere...';  
-   e.target.textContent = Titulo; 
+   lis.querySelector('a').textContent = Titulo; 
   setTimeout(() => {
      window.location.href = Enlace;
   }, 2000);
@@ -134,9 +136,11 @@ lis.style.borderBottom = '.1px solid #4f3';
           F.src = Enlace;
       }
         H.textContent = Titulo;
+     F.style.background = 'url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinuR3l58e9MiWP_hDFssCF5NqAMMhF-rPxTJychbQR8ViB2Y2msjtuYetE3Apf43IQe_mqNG5_8I-HKQbkf-GvRtenXE5fDLEH8kn0wmvBX7MBwtFIvHusDIsB14x1XdAYcay-AqPgXamUKOYE2JVKUEkO1if0bBhsYrpZL1qbpqw5UDhNubuehQzMgng/s498/image_downloader_1700646861820.gif)';
     }
- })
+ });
 </script>
+
          <!-- texto -->
 <script>
 window.addEventListener('DOMContentLoaded', () => {
