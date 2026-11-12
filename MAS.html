@@ -146,7 +146,7 @@ a {
 window.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);
            var textCapt = params.get('texto');
-  
+           
         if (textCapt) {
      var enlaces = document.querySelectorAll('#Lista li a');     
     
@@ -156,7 +156,13 @@ window.addEventListener('DOMContentLoaded', () => {
         if (Clean === textCapt.trim().toLowerCase()) {
         a.click(); 
       }
-    });
+    });  
+  
+ } else if (params.has('index')) {
+  var enlaces = document.querySelectorAll('#Lista li a');     
+      
+   var R = Math.floor(Math.random() * enlaces.length);
+      enlaces[R].click();     
   }
 });
 </script>      
