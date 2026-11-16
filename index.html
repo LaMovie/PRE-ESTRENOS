@@ -151,7 +151,7 @@ box-shadow:
   
   <li><a href="https://www.dropbox.com/scl/fi/47749g9zepwmjpefwl0wv/STREET-FIGHTER-Copy.mp4?rlkey=gq0lhvqq7o1bohm5m5h7mjc4b&st=flotfyvx&dl=0">STREET FIGHTER</a></li>
   
-  <li><a href="https://www.youtube.com/watch?v=PHGZS3szreo">EBENEZER🔴</a></li>
+  <li><a id="Timer" href="https://www.youtube.com/watch?v=PHGZS3szreo">EBENEZER🔴</a></li>
  
   <li><a href="https://www.youtube.com/watch?v=QEwlcDXFkiA">EL EXORCISTA🔴</a></li>
   
@@ -188,6 +188,10 @@ List.querySelectorAll('li').forEach(li => {
             li.classList.remove('Active');
         });
              elemento.classList.add('Active');
+             
+        if (ENLACE.includes('latino.solo')) {
+      window.location.href = ENLACE;
+        }     
       }
     };   
     
@@ -249,6 +253,42 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-</script>                       
+</script>   
+
+   <!-- TIMER ESTRENOS -->
+<script>
+    var T = Timer.textContent.replace('🔴', '');
+    
+  // Establece la fecha y hora del evento (año, mes-1, día, hora-3, minuto-18, segundo)
+
+var eventDate = new Date(2026, 10, 18, 00, 00, ).getTime(); 
+ 
+  // Actualiza la cuenta regresiva cada segundo 
+
+var countdownInterval = setInterval(() => {
+    var now = new Date().getTime();
+    var timeRemaining = eventDate - now;
+    
+     // Calcula los días, horas, minutos y segundos restantes usando las constantes correctas.
+     
+    var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+
+    // Muestra la cuenta regresiva en el elemento con id "timer".
+    
+    Timer.innerHTML = `${T}🔴 ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    // Si la cuenta regresiva ha terminado, muestra un mensaje 
+    
+    if (timeRemaining < 0) {
+        clearInterval(countdownInterval);
+  Timer.textContent = T + '🎉';
+      Timer.href = 'https://latino.solo-latino.com/es/detail/movie/wkQ7zXYkmNRf2j2RqMIBg-Ebenezer';
+    }
+}, 1000);
+</script>                    
 </body>
 </html>
